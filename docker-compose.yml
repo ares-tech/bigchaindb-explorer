@@ -1,13 +1,10 @@
 version: "3"
 services:
   explorer:
-    build:
-      context: .
-      dockerfile: explorer.dockerfile
-
+    build: .
     restart: always
     command: ["python", "main.py", "--server-type", "explorer", "--host", "0.0.0.0", "--port", "8000"]
     ports:
-      - "8080:8000"
+      - "18080:8000"
     volumes:
       - "./instance:/instance"
