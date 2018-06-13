@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>BigchainDB Explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/explorer.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/KelpJSONView.css') }}">
+
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/apple-touch-icon-72x72.png') }}">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/apple-touch-icon-114x114.png') }}">
+</head>
+
+<body>
+  <div class="container">
+    <div class="sixteen columns">
+      <h1 class="remove-bottom" style="margin-top: 40px">BigchainDB Explorer <img src="{{ url_for('static', filename='img/spinner.gif') }}" id="loading" alt="" title="" width="16" height="16" style="display: none;" /></h1>
+      <h5>Explore assets, accounts and transactions on BigChainDB</h5>
+      <hr />
+    </div>
+    <div class="four columns" id="sidebar">
+      <dl>
+        <dt><h4>Transactions</h4></dt>
+        <dd><a href="/api/v1/transactions/{{ txid }}" data-requestmethod="get">Get by ID</a></dd>
+      </dl>
+    </div>
+    <div class="eleven columns">
+      <form action="#" method="post" class="row">
+        <label class="two columns alpha">
+          <select name="requestmethod" id="requestmethod">
+            <option value="GET">GET</option>
+          </select>
+        </label>
+        <label class="nine columns omega">
+          <input type="text" id="apiurl" />
+        </label>
+      </form>
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/jquery-1.7.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/KelpJSONView.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
