@@ -2,7 +2,7 @@ import hashlib
 import binascii
 
 from flask import Flask
-from flask import request, make_response, jsonify, url_for
+from flask import request, jsonify, url_for
 from flask import render_template, redirect
 import requests
 
