@@ -1,5 +1,20 @@
 * Simple BigchainDB Explorer
-** Setup 
+** Setup
    #+BEGIN_SRC sh
    ./setup.sh
    #+END_SRC
+** Screenshot
+   #+CAPTION: This is screenshot of default display
+   #+NAME:  fig:screenshot1
+   [[./screenshot/screenshot1.png]]
+   #+CAPTION: This is screenshot of specific transaction
+   #+NAME:  fig:screenshot2
+   [[./screenshot/screenshot2.png]]
+   #+CAPTION: This is screenshot of non-existent transaction
+   [[./screenshot/screenshot3.png]]
+
+** Usage
+   Replace the {txid} by specific transaction id at the end of the request url like:
+   http://<host>:<port>/api/v1/transactions/{txid}
+
+   Or send a request to http://<host>:<port>/api/v1/transactions/{txid} directly
