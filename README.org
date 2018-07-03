@@ -1,4 +1,7 @@
-* Simple BigchainDB Explorer
+* BigchainDB Explorer
+
+A python flask webapp for exploring transactions in a BigchainDB blockchain, currently in the open source community, this [[https://github.com/ares-tech/bigchaindb-explorer/][repo here]] is the onle one that supports the latest version of BigchainDB 2.0.
+
 ** Setup
    #+BEGIN_SRC sh
    ./setup.sh
